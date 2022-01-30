@@ -169,21 +169,23 @@ follows:
 
 Common commands:
 
-|               |               |
-| ------------- | ------------- |
-| `kitchen init` | Adds minimal tests configuration to your cookbook. Test files also generated when one runs thecommand generate a cookbook from scratch: chef generate cookbook |
-| `kitchen create` | Creates an instance (VM or Container) |
-| `kitchen converge` | Uses a provisioner to configure one or more instances |
-| `kitchen verify` | Runs tests on one or more instances |
-| `kitchen login` | Logs in to an instance |
-| `kitchen test` | Runs all stages of the test (destroy, create, converge, setup, verify and destroy) |
+|                         	|  	|
+|---	|---	|
+| `kitchen init`        	| Adds minimal tests configuration to your cookbook. 	|
+| `kitchen create` 	      | Creates an instance (VM or Container) 	|
+| `kitchen converge`    	| Uses a provisioner to configure one or more instances 	|
+| `kitchen verify`       	| Runs tests on one or more instances 	|
+| `kitchen login`        	| Logs in to an instance 	|
+| `kitchen test`         	| Runs all stages of the test (destroy, create, converge, setup, verify and destroy) 	|
+> Test files will also be generated when the command `chef generate cookbook` is ran.
 
-Kitchen uses either Berkshelf or Policyfiles to resolve cookbook
-dependencies
+
+#### Cookbook Dependencies
+Kitchen uses either Berkshelf or Policyfiles to resolve dependencies
 
 ##### Using Berkshelf
 
-A Berksfile is used to specify where test kitchen will find cookbooks
+A Berksfile can be used to specify where test kitchen will find cookbooks
 and fixtures. Example:
 
 ```ruby
@@ -194,9 +196,9 @@ group :test do
 end
 ```
 
-##### Using Policyfiles \[WIP\]
+##### Using Policyfiles (Recommended) \[WIP\]
 
-A Policyfile is used to specify where test kitchen will find cookbooks
+A Policyfile can be used to specify where test kitchen will find cookbooks
 and fixtures. Example:
 
 ```ruby
